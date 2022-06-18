@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "agenda"
+  name: "home"
 }
 </script>
 
