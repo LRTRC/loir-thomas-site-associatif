@@ -89,23 +89,26 @@
 </template>
 
 <script>
+import { mdiHome, mdiCalendar } from '@mdi/js'
+
 export default {
   name: 'DefaultLayout',
   data () {
     return {
+      svgPath: [mdiHome, mdiCalendar],
       clipped: false,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: 'mdi-home',
+          title: 'Home',
+          to: '/home'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-calendar',
+          title: 'Agenda',
+          to: '/agenda'
         }
       ],
       miniVariant: false,
