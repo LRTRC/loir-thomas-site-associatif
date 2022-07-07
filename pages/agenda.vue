@@ -11,10 +11,10 @@
 
     <v-row justify="center">
       <v-col cols="12" md="10">
-        <iframe class="map" height="100%" frameborder="10" width="100%" scrolling="no"
-          src="https://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=22+Boulevard+Béranger 37000 Tours&amp;vpsrc=1&amp;output=embed"
-          marginwidth="0" marginheight="0">
-        </iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.1418288301124!2d0.6823868335054476!3d47.38966554431728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5b7b725aec5%3A0x652b0c6527606376!2s22%20Bd%20B%C3%A9ranger%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1657200550848!5m2!1sfr!2sfr"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </v-col>
     </v-row>
 
