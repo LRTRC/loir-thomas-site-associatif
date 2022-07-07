@@ -20,10 +20,10 @@
         <custom-card :subtitle="subtitles[0]" :paragraph="paragraphs[0]" :src="src[0]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]" />
+        <custom-card :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]" />
+        <custom-card :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]" />
       </v-col>
     </v-row>
     <v-row>
@@ -65,11 +65,11 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[4]" :paragraph="paragraphs[4]" :src="src[4]" />
+       <v-col cols="12" sm="6" md="4">
+        <custom-card :subtitle="subtitles[5]" :paragraph="paragraphs[5]" :src="src[5]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[5]" :paragraph="paragraphs[5]" :src="src[5]" />
+        <custom-card :subtitle="subtitles[4]" :paragraph="paragraphs[4]" :src="src[4]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
         <custom-card :subtitle="subtitles[6]" :paragraph="paragraphs[6]" :src="src[6]" />
