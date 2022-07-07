@@ -66,13 +66,13 @@
     </v-row>
     <v-row justify="center">
        <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[5]" :paragraph="paragraphs[5]" :src="src[5]" />
+        <coach :subtitle="subtitles[5]" :paragraph="paragraphs[5]" :src="src[5]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[4]" :paragraph="paragraphs[4]" :src="src[4]" />
+        <coach :subtitle="subtitles[4]" :paragraph="paragraphs[4]" :src="src[4]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card :subtitle="subtitles[6]" :paragraph="paragraphs[6]" :src="src[6]" />
+        <coach :subtitle="subtitles[6]" :paragraph="paragraphs[6]" :src="src[6]" />
       </v-col>
     </v-row>
 
@@ -104,14 +104,18 @@
 </template>
 
 <script>
-import customCard from '../components/home/customCard';
+
 import customHeader from '../components/customHeader';
+import customCard from "../components/customCard";
+import coach from "../components/home/coach";
+
 
 export default {
   name: "home",
   components: {
     customCard,
     customHeader,
+    coach,
   },
   data() {
     return {
@@ -123,9 +127,9 @@ export default {
         '../pilate.jpeg',
         '../body_balance.jpeg',
         '../who_are_we.jpeg',
-        '../coach_georges.jpeg',
-        '../coach_nathalie.jpeg',
-        '../coach_alexis.jpeg',
+        '../coach_georges.png',
+        '../coach_nathalie.png',
+        '../coach_alexis.png',
         '../woman_avatar.jpeg',
         ],
       subtitles: [

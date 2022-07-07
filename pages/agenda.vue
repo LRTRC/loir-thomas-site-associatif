@@ -43,15 +43,18 @@
 
     <v-row justify="center">
       <v-col cols="12" sm="6" md="4"
-        v-if="selectedTheme === null && date === null || selectedTheme === 'portes ouvertes' && date === '2022-09-12' || date === '2022-09-12' && selectedTheme === null || selectedTheme === 'portes ouvertes' && date === null">
+        v-if="selectedTheme === null && date === null || selectedTheme === 'portes ouvertes' && date === '2022-09-12'
+         || date === '2022-09-12' && selectedTheme === null || selectedTheme === 'portes ouvertes' && date === null">
         <CustomCard :subtitle="subtitles[0]" :paragraph="paragraphs[0]" :src="src[0]" />
       </v-col>
       <v-col cols="12" sm="6" md="4"
-        v-if="selectedTheme === null && date === null || selectedTheme === 'compétition' && date === '2022-11-18' || date === '2022-11-18' && selectedTheme === null || selectedTheme === 'compétition' && date === null">
+        v-if="selectedTheme === null && date === null || selectedTheme === 'compétition' && date === '2022-11-18'
+        || date === '2022-11-18' && selectedTheme === null || selectedTheme === 'compétition' && date === null">
         <CustomCard :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]" />
       </v-col>
       <v-col cols="12" sm="6" md="4"
-        v-if="selectedTheme === null && date === null || selectedTheme === 'exhibition' && date === '2022-08-05' || date === '2022-08-05' && selectedTheme === null || selectedTheme === 'exhibition' && date === null">
+        v-if="selectedTheme === null && date === null || selectedTheme === 'exhibition' && date === '2022-08-05'
+        || date === '2022-08-05' && selectedTheme === null || selectedTheme === 'exhibition' && date === null">
         <CustomCard :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]" />
       </v-col>
     </v-row>
@@ -61,7 +64,8 @@
 
 <script>
 import CustomHeader from '../components/customHeader.vue';
-import CustomCard from '../components/home/customCard.vue';
+import CustomCard from '../components/customCard.vue';
+
 export default {
   name: "agenda",
   components: { CustomHeader, CustomCard },

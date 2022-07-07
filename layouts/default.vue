@@ -15,7 +15,7 @@
         </v-col>
 
         <v-col cols="1">
-          <v-img id="logo" src="..\LOGO FITNESS.svg" />
+          <v-img id="logo" src="..\LOGO.svg" />
         </v-col>
 
         <v-col>
@@ -70,7 +70,7 @@ export default {
 }
 
 #logo {
-  z-index: 9999 !important;
+  z-index: 9999!important;
   position: fixed !important;
-} 
+}
 </style>
