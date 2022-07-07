@@ -1,17 +1,35 @@
 <template>
   <v-app dark>
-    <v-app-bar fixed app>
-      <v-spacer />
+    <v-app-bar fixed elevate-on-scroll app>
       <v-row justify="center">
         <v-col>
-          <v-tabs centered grow background-color="#272727">
-            <v-tab v-for="(route, i) in routes" :key="i" :to="route.to" router exact>
-              {{ route.title }}
+          <v-spacer />
+        </v-col>
+
+        <v-col>
+          <v-tabs centered background-color="#272727">
+            <v-tab :to="routes[0].to" router exact>
+              {{ routes[0].title }}
             </v-tab>
           </v-tabs>
         </v-col>
+
+        <v-col cols="1">
+          <v-img id="logo" src="..\LOGO FITNESS.svg" />
+        </v-col>
+
+        <v-col>
+          <v-tabs centered background-color="#272727">
+            <v-tab :to="routes[1].to" router exact>
+              {{ routes[1].title }}
+            </v-tab>
+          </v-tabs>
+        </v-col>
+
+        <v-col>
+          <v-spacer />
+        </v-col>
       </v-row>
-      <v-spacer />
     </v-app-bar>
     <v-main>
       <v-container fluid>
@@ -26,31 +44,21 @@
 </template>
 
 <script>
-import { mdiHome, mdiCalendar } from '@mdi/js'
 
 export default {
   name: 'DefaultLayout',
   data() {
     return {
-      icons: [mdiHome, mdiCalendar],
-      clipped: false,
-      drawer: false,
       routes: [
         {
-          icon: 'mdi-home',
-          title: 'Accueil',
+          title: "L'association",
           to: '/home'
         },
         {
-          icon: 'mdi-calendar',
-          title: 'Agenda',
+          title: 'Les rendez-vous',
           to: '/agenda'
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: ["L'association", "Les rendez-vous"]
     }
   }
 }
@@ -58,6 +66,11 @@ export default {
 
 <style scoped>
 .v-tab:hover::before {
-      opacity: 0!important;
+  opacity: 0 !important;
 }
+
+#logo {
+  z-index: 9999 !important;
+  position: fixed !important;
+} 
 </style>
