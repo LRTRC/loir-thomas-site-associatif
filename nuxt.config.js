@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - loir-thomas-site-web-associatif',
-    title: 'loir-thomas-site-web-associatif',
+    title: 'TOURANGEAU GYM CLUB',
     htmlAttrs: {
       lang: 'en'
     },
