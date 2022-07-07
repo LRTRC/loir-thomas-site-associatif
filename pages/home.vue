@@ -2,10 +2,7 @@
   <div>
     <v-row>
       <v-col>
-        <custom-header
-        :title="headerTitle"
-        :subtitle="headerSubTitle"
-        />
+        <custom-header :title="headerTitle" :subtitle="headerSubTitle" />
       </v-col>
     </v-row>
 
@@ -20,30 +17,18 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[0]"
-          :paragraph="paragraphs[0]"
-          :src="src[0]"
-        />
+        <custom-card :subtitle="subtitles[0]" :paragraph="paragraphs[0]" :src="src[0]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[1]"
-          :paragraph="paragraphs[1]"
-          :src="src[1]"
-        />
+        <custom-card :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[2]"
-          :paragraph="paragraphs[2]"
-          :src="src[2]"
-        />
+        <custom-card :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]" />
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <v-img/>
+        <v-img />
       </v-col>
     </v-row>
 
@@ -58,7 +43,7 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" md="8" lg="6">
-        <v-img :src="src[3]"/>
+        <v-img :src="src[3]" />
         <v-card>
           <h3>
             {{ subtitles[3] }}
@@ -81,25 +66,13 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[4]"
-          :paragraph="paragraphs[4]"
-          :src="src[4]"
-        />
+        <custom-card :subtitle="subtitles[4]" :paragraph="paragraphs[4]" :src="src[4]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[5]"
-          :paragraph="paragraphs[5]"
-          :src="src[5]"
-        />
+        <custom-card :subtitle="subtitles[5]" :paragraph="paragraphs[5]" :src="src[5]" />
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <custom-card
-          :subtitle="subtitles[6]"
-          :paragraph="paragraphs[6]"
-          :src="src[6]"
-        />
+        <custom-card :subtitle="subtitles[6]" :paragraph="paragraphs[6]" :src="src[6]" />
       </v-col>
     </v-row>
 
@@ -114,15 +87,14 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="8" md="4" lg="3" class="text-center">
-        <v-card
-        >
+        <v-card>
           <v-avatar size="65%" class="pa-4">
-            <v-img :src="src[7]"/>
+            <v-img :src="src[7]" />
           </v-avatar>
           <v-card-subtitle>
             {{ testimonialTitle }}
           </v-card-subtitle>
-          <v-card-text >
+          <v-card-text>
             {{ testimonialBody }}
           </v-card-text>
         </v-card>
@@ -155,17 +127,16 @@ export default {
         '../coach_nathalie.jpeg',
         '../coach_alexis.jpeg',
         '../woman_avatar.jpeg',
-        '8',
-        '9'],
+        ],
       subtitles: [
         'functionnal training',
-        'pilate',
+        'pilates',
         'body balance',
         'qui sommes-nous ?',
         'Georges Delapierre',
         'Nathalie Nemann',
         'Alexis Seros',
-        ],
+      ],
       paragraphs: [
         'Nos séances sont basées sur de la préparation physique et sont adaptées à ' +
         'tous les niveaux et conditions physiques.\n' +
@@ -185,10 +156,10 @@ export default {
         ' De plus, nous proposons un réel suivi bien-être à travers nos disciplines ' +
         '(yoga, méditation, cours privés) ainsi que nos prestataires ' +
         '(nutrition, sophrologie, naturopathie, kinésithérapeute).',
-        'coach pilate - fitness',
+        'coach pilates - fitness',
         'coach ft - crossfit',
         'coach body balance - yoga',
-        ],
+      ],
       testimonialTitle: 'Alexandra',
       testimonialBody: 'Super club, excellente prise en charge, progression garantie',
     }
@@ -197,5 +168,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
