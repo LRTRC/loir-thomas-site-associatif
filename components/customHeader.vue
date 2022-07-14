@@ -3,7 +3,7 @@
     <v-row>
       <v-col offset="2">
         <h1>
-          {{ title }}
+          {{ title.toUpperCase() }}
         </h1>
       </v-col>
     </v-row>

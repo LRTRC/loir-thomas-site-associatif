@@ -22,9 +22,6 @@
 
     <v-row>
       <v-col>
-        <v-text-field v-model="searchField" label="Rechercher ..." clearable></v-text-field>
-      </v-col>
-      <v-col>
         <v-select v-model="selectedTheme" :items="themes" label="Thèmes" clearable></v-select>
       </v-col>
       <v-col>

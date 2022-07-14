@@ -11,7 +11,7 @@
     <v-row>
       <v-col>
         <h2>
-          {{ titles[0] }}
+          {{ titles[0].toUpperCase() }}
         </h2>
       </v-col>
     </v-row>
@@ -37,7 +37,7 @@
     <v-row>
       <v-col>
         <h2>
-          {{ titles[1] }}
+          {{ titles[1].toUpperCase() }}
         </h2>
       </v-col>
     </v-row>
@@ -46,7 +46,7 @@
         <v-img :src="src[3]" />
         <v-card>
           <h3>
-            {{ subtitles[3] }}
+            {{ subtitles[3].toUpperCase()  }}
           </h3>
           <p>
             {{ paragraphs[3] }}
@@ -60,7 +60,7 @@
     <v-row>
       <v-col>
         <h2>
-          {{ titles[2] }}
+          {{ titles[2].toUpperCase() }}
         </h2>
       </v-col>
     </v-row>
@@ -81,7 +81,7 @@
     <v-row>
       <v-col>
         <h2>
-          {{ titles[3] }}
+          {{ titles[3].toUpperCase() }}
         </h2>
       </v-col>
     </v-row>

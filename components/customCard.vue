@@ -4,7 +4,7 @@
       :src="src"
     />
     <h3>
-      {{ subtitle }}
+      {{ subtitle.toUpperCase() }}
     </h3>
     <p>
       {{ paragraph }}
