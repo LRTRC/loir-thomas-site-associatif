@@ -13,14 +13,27 @@ $heading-font-family: 'Barlow-Black' !default;
   h1 {
     font-family: $heading-font-family;
     font-style: italic;
-    font-size: 8em!important;
-    letter-spacing: 15px!important;
+    font-size: 8em !important;
+    letter-spacing: 15px !important;
     text-shadow: 5px 0 0 #E800A2, -4px -3px 0 #00FFFF;
   }
-  h2, h3, h4 {
+
+  h2 {
     font-family: $heading-font-family;
     font-style: italic;
-    text-shadow: 0 2px 0 #6365e9;
+    color: #662D91 !important;
+    letter-spacing: 4px !important;
+    text-shadow: -1px 0px 0px #00FFFF;
+
+  }
+
+  h3 {
+    font-family: $heading-font-family;
+    font-size: 1.2em !important;
+  }
+
+  p {
+    font-weight: bold;
   }
 
 }
