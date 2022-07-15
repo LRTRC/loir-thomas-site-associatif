@@ -7,7 +7,7 @@
         </v-col>
 
         <v-col>
-          <v-tabs centered background-color="#272727">
+          <v-tabs dark centered color="accent" background-color="#272727">
             <v-tab :to="routes[0].to" router exact>
               {{ routes[0].title }}
             </v-tab>
@@ -15,11 +15,11 @@
         </v-col>
 
         <v-col cols="1">
-          <v-img id="logo" src="..\LOGO.svg" />
+          <v-img id="logo" src="..\logo.svg" />
         </v-col>
 
         <v-col>
-          <v-tabs centered background-color="#272727">
+          <v-tabs dark centered color="accent" background-color="#272727">
             <v-tab :to="routes[1].to" router exact>
               {{ routes[1].title }}
             </v-tab>
@@ -67,6 +67,10 @@ export default {
 <style scoped>
 .v-tab:hover::before {
   opacity: 0 !important;
+}
+
+.v-app-bar {
+  background-color: #272727!important;
 }
 
 #logo {
