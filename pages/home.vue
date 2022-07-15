@@ -7,11 +7,10 @@
     </v-row>
 
     <v-row>
-      <v-col cols="12" md="6" class="customContainer">
-        <img
-          height="100%"
-          width="100%"
-          src="/who_we_are.svg"
+      <v-col cols="12" md="6" >
+        <v-img
+          src="/who_we_are.png"
+          aspect-ratio="1.4"
         />
       </v-col>
       <v-col cols="12" md="6" class="align-self-center">

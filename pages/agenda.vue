@@ -2,7 +2,7 @@
   <div>
 
     <v-row>
-      <v-col>
+      <v-col  class="pt-0 px-0">
         <CustomHeader :title="headerTitle" :subtitle="headerSubTitle" />
       </v-col>
     </v-row>
