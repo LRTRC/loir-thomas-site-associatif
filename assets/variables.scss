@@ -5,20 +5,22 @@
   font-family: "Barlow-Black";
   src: url("assets/fonts/Barlow-Black.ttf");
 }
-@font-face {
-  font-family: "BodoniModa-Black";
-  src: url("assets/fonts/BodoniModa.ttf");
-}
 
-$body-font-family:'BodoniModa'!default;
-$heading-font-family:'Barlow-Black'!default;
+$heading-font-family: 'Barlow-Black' !default;
 
 
 .v-application {
- h1, h2, h3, h4 {
-   font-family: $heading-font-family;
-   font-style: italic;
-   text-shadow: 0 2px 0 #6365e9;
- }
+  h1 {
+    font-family: $heading-font-family;
+    font-style: italic;
+    font-size: 8em!important;
+    letter-spacing: 15px!important;
+    text-shadow: 5px 0 0 #E800A2, -4px -3px 0 #00FFFF;
+  }
+  h2, h3, h4 {
+    font-family: $heading-font-family;
+    font-style: italic;
+    text-shadow: 0 2px 0 #6365e9;
+  }
 
 }

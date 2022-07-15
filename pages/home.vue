@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col>
+      <v-col class="pt-0 px-0">
         <custom-header :title="headerTitle" :subtitle="headerSubTitle" />
       </v-col>
     </v-row>
@@ -119,8 +119,8 @@ export default {
   },
   data() {
     return {
-      headerTitle: 'tourangeau gym club',
-      headerSubTitle: 'complexe sportif mixt - développement personnel - bien-être',
+      headerTitle: 'GYM CLUB',
+      headerSubTitle: 'Complexe sportif mixt',
       titles: ['catégories', 'présentation', 'l\'équipe', 'témoignage'],
       src: [
         '../functional_training.jpeg',
