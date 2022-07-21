@@ -16,19 +16,17 @@
       </v-col>
     </v-row>
 
-    <v-row justify="center" class="my-4">
+    <v-row class="my-4">
+      <v-col offset="1">
+        <h2>
+          {{ titles[1].toUpperCase() }}
+        </h2>
+      </v-col>
+    </v-row>
 
+    <v-row justify="center" class="my-4">
       <v-col cols="10" md="8">
         <v-card flat>
-
-          <v-row class="my-4" justify="center">
-            <v-col class="text-center">
-              <h2>
-                {{ titles[1].toUpperCase() }}
-              </h2>
-            </v-col>
-          </v-row>
-
           <v-window
             v-model="onBoarding"
           >

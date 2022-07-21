@@ -56,20 +56,17 @@
       </v-col>
     </v-row>
 
+    <v-row class="mt-4" >
+      <v-col offset="1">
+        <h2>
+          {{ titles[2].toUpperCase() }}
+        </h2>
+      </v-col>
+    </v-row>
 
     <v-row justify="center" class="mx-1 my-4 ma-sm-4">
-
       <v-col cols="12" md="8">
         <v-card flat>
-
-          <v-row class="mt-4" justify="center">
-            <v-col class="text-center">
-              <h2>
-                {{ titles[2].toUpperCase() }}
-              </h2>
-            </v-col>
-          </v-row>
-
           <v-window
             v-model="onBoarding"
           >
@@ -193,7 +190,6 @@
 
 import customHeader from '../components/customHeader';
 import customCard from "../components/customCard";
-import coach from "../components/home/coach";
 import {mdiChevronDoubleLeft, mdiChevronDoubleRight, mdiRecord} from '@mdi/js';
 
 export default {
@@ -201,7 +197,6 @@ export default {
   components: {
     customCard,
     customHeader,
-    coach,
   },
   data() {
     return {
