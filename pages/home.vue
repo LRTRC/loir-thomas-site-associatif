@@ -6,8 +6,8 @@
       </v-col>
     </v-row>
 
-    <v-row>
-      <v-col cols="12" md="6" >
+    <v-row class="my-4">
+      <v-col cols="12" md="6">
         <v-img
           src="/who_we_are.png"
           aspect-ratio="1.4"
@@ -57,76 +57,123 @@
     </v-row>
 
 
-    <v-row class="my-4">
-      <v-col offset="1" class="pa-4">
-        <h2>
-          {{ titles[2].toUpperCase() }}
-        </h2>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-card class="customContainer" flat>
-          <v-carousel
-            hide-delimiter-background
-            show-arrows-on-hover
-            cycle
-            interval="8000"
+    <v-row justify="center" class="my-4">
+
+      <v-col cols="10" md="8">
+        <v-card flat>
+
+          <v-row class="my-4" justify="center">
+            <v-col class="text-center">
+              <h2>
+                {{ titles[2].toUpperCase() }}
+              </h2>
+            </v-col>
+          </v-row>
+
+          <v-window
+            v-model="onBoarding"
           >
-            <v-carousel-item
+            <v-window-item
               v-for="(coach, i) in coaches"
-              :key="i"
+              :key="i">
+              <v-card
+                height="100%"
+                width="100%"
+                flat
+              >
+                <v-row class="ma-4">
+                  <v-col cols="12" md="6">
+                    <!-- image -->
+                  </v-col>
+                  <v-col cols="12" md="6">
+                    <v-row>
+                      <v-col>
+                        <p class="py-4 text-left">
+                          {{ coach.testimony }}
+                        </p>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col class="text-right">
+                        <h3>
+                          {{ coach.name }}
+                        </h3>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col class="text-right">
+                        <p>
+                          <span class="jobs">{{ coach.job }}</span>
+                        </p>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
+
+              </v-card>
+            </v-window-item>
+          </v-window>
+
+          <v-card-actions class="justify-space-between">
+            <v-btn
+              text
+              @click="prev"
             >
-              <v-row class="customContainer">
-                <v-col cols="6">
-                  <v-row justify="center">
-                    <v-col cols="8">
-                      <p class="py-4">
-                        {{ coach.testimony }}
-                      </p>
-                    </v-col>
-                  </v-row>
-                  <v-row justify="center">
-                    <v-col cols="6">
-                      <h3>
-                        {{ coach.name }}
-                      </h3>
-                    </v-col>
-                  </v-row>
-                  <v-row justify="center">
-                    <v-col cols="6">
-                      <p>
-                        <span class="jobs">{{ coach.job }}</span>
-                      </p>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col cols="6">
-                  <v-card
-                    :class="coach.cssClass"
-                    height="100%"
-                    width="100%"
-                    flat
-                  />
-                </v-col>
-              </v-row>
-            </v-carousel-item>
-          </v-carousel>
+              <v-icon
+                x-large
+                color="primary"
+              >
+                {{ icons[0] }}
+              </v-icon>
+            </v-btn>
+            <v-item-group
+              v-model="onBoarding"
+              class="text-center"
+              mandatory
+            >
+              <v-item
+                v-for="(coach, i) in coaches"
+                :key="i"
+                v-slot="{ active, toggle }"
+              >
+                <v-btn
+                  :input-value="active"
+                  icon
+                  @click="toggle"
+                >
+                  <v-icon>
+                    {{ icons[2] }}
+                  </v-icon>
+                </v-btn>
+              </v-item>
+            </v-item-group>
+            <v-btn
+              text
+              @click="next"
+            >
+              <v-icon
+                x-large
+                color="primary"
+              >
+                {{ icons[1] }}
+              </v-icon>
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
 
 
     <v-row>
-      <v-col>
+      <v-col offset="1">
         <h2>
           {{ titles[3].toUpperCase() }}
         </h2>
       </v-col>
     </v-row>
-    <v-row justify="center">
+    <v-row class="my-4" justify="center">
       <v-col cols="8" md="4" lg="3" class="text-center">
-        <v-card>
+        <v-card class="customCardShadow" raised rounded="xl">
           <v-avatar size="65%" class="pa-4">
             <img :src="src[3]"/>
           </v-avatar>
@@ -147,7 +194,7 @@
 import customHeader from '../components/customHeader';
 import customCard from "../components/customCard";
 import coach from "../components/home/coach";
-
+import {mdiChevronLeft, mdiChevronRight, mdiRecord} from '@mdi/js';
 
 export default {
   name: "home",
@@ -158,24 +205,23 @@ export default {
   },
   data() {
     return {
+      onBoarding: 0,
+      icons: [mdiChevronLeft, mdiChevronRight, mdiRecord],
       coaches: [
         {
           name: 'Georges Delapierre',
           job: 'coach pilates - fitness',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
-          cssClass: 'delapierre',
         },
         {
           name: 'Nathalie Nemann',
           job: 'coach body balance - yoga',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
-          cssClass: 'nemann',
         },
         {
           name: 'Alexis Seros',
           job: 'coach ft - crossfit',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
-          cssClass: 'seros',
         },
 
       ],
@@ -217,32 +263,23 @@ export default {
       testimonialTitle: 'Alexandra',
       testimonialBody: 'Super club, excellente prise en charge, progression garantie',
     }
-  }
+  },
+  methods: {
+    next() {
+      this.onBoarding = this.onBoarding + 1 === this.coaches
+        ? 0
+        : this.onBoarding + 1
+    },
+    prev() {
+      this.onBoarding = this.onBoarding - 1 < 0
+        ? this.coaches - 1
+        : this.onBoarding - 1
+    },
+  },
 }
 </script>
 
 <style scoped>
-
-.customContainer {
-  height: 450px !important;
-}
-
-.carouselContainer {
-  height: 450px !important;
-}
-
-.delapierre {
-  background-image: url("/coach_george.svg");
-}
-
-.nemann {
-  background-image: url("/coach_nathalie.svg");
-
-}
-
-.seros {
-  background-image: url("/coach_alexis.svg");
-}
 
 .jobs {
   color: #662D91;
@@ -250,7 +287,9 @@ export default {
   font-style: italic;
   font-size: 1em !important;
   letter-spacing: 5px !important;
-  text-shadow: -1px 0 0 #00FFFF;
 }
 
+.customCardShadow {
+  box-shadow: 4px 8px 16px 0 rgba(31, 38, 135, 0.37) !important;
+}
 </style>

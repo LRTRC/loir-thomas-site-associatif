@@ -50,7 +50,8 @@ export default {
 <style scoped>
 
 #customCard {
-border-radius: 25px;
+  border-radius: 25px;
+  box-shadow: 4px 8px 16px 0 rgba(31, 38, 135, 0.37) !important;
 }
 
 .customCardRowImg {
