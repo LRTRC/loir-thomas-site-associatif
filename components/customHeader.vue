@@ -1,12 +1,37 @@
 <template>
-<v-card>
-  <h1>
-    {{ title }}
-  </h1>
-  <v-card-subtitle class="HeaderSubtitle">
-    {{ subtitle }}
-  </v-card-subtitle>
-</v-card>
+  <v-card id="customHeaderCard" class="pt-12 pt-md-0">
+    <v-row justify="center">
+      <v-col cols="12" md="6" class="align-self-center text-center">
+        <v-row>
+          <v-col class="pt-0 my-0">
+            <h1>
+              <span class="titleH1">GYM</span> <span class="titleH1">CLUB</span>
+            </h1>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="pt-0 my-0">
+            <v-card-subtitle class="subtitle pt-0 my-0">
+              {{ subtitle }}
+            </v-card-subtitle>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col id="imgColumn" cols="12" md="6" lg="4">
+        <img
+          width="100%"
+          height="100%"
+          src="/banner.png"
+        />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
 
 <script>
@@ -27,4 +52,23 @@ export default {
 
 <style scoped>
 
+@media (max-width: 959px) {
+  #imgColumn {
+    display: none !important;
+  }
+}
+
+#customHeaderCard {
+  background-color: #272727;
+  border-radius: 0 !important;
+}
+
+.titleH1 {
+  color: white;
+}
+
+.subtitle {
+  color: #C8B1DD;
+  font-size: 1.6em !important;
+}
 </style>
