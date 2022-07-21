@@ -1,10 +1,9 @@
-import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - loir-thomas-site-web-associatif',
-    title: 'loir-thomas-site-web-associatif',
+    title: 'TOURANGEAU GYM CLUB',
     htmlAttrs: {
       lang: 'en'
     },
@@ -43,18 +42,23 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true, //  required for custom SASS variables to work
     theme: {
-      dark: true,
+      dark: false,
+      defaultAssets: false,
+      icons: {
+        iconfont: 'mdiSvg',
+      },
       themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
+        light: {
+          primary: '#662D91',
+          secondary: '#E800A2',
+          accent: '#00FFFF',
+          error: '#FF5252',
+          info: '#008ddf',
+          success: '#429E45',
+          warning: '#E07B00',
+        },
       }
     }
   },

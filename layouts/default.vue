@@ -1,118 +1,106 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-app-bar
-      :clipped-left="clipped"
+      dark
       fixed
-      app
+      elevate-on-scroll
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      <img
+        height="100px"
+        width="100px"
+        id="logo"
+        src="/logo.svg"
+      />
+      <v-tabs centered dark color="accent" background-color="#272727">
+        <v-tab
+          :to="routes[0].to" router exact
+        >
+          {{ routes[0].title }}
+        </v-tab>
+      </v-tabs>
+      <v-tabs centered dark color="accent" background-color="#272727">
+        <v-tab
+          :to="routes[1].to" router exact
+        >
+          {{ routes[1].title }}
+        </v-tab>
+      </v-tabs>
+
+
     </v-app-bar>
+
     <v-main>
-      <v-container>
-        <Nuxt />
+      <v-container fluid>
+        <Nuxt/>
       </v-container>
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+
+    <v-footer id="footer" fixed app>
+      <v-row justify="center">
+        <img
+          class="ma-2 pa-1"
+          height="40px"
+          width="40px"
+          id="logoFooter"
+          src="/logo_footer.svg"
+        />
+        <v-col class="text-left align-self-center">
+          <span class="copyright">Tourangeau GYM Club &copy; {{ new Date().getFullYear() }} - </span>
+          <span class="mentionsLegales">Mentions legales</span>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+
 export default {
   name: 'DefaultLayout',
-  data () {
+  data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
+      routes: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          title: "accueil",
+          to: '/home'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'agenda',
+          to: '/agenda'
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
     }
   }
 }
 </script>
+
+<style scoped>
+.v-tab:hover::before {
+  opacity: 0 !important;
+}
+
+#logo {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.v-app-bar {
+  background-color: #272727 !important;
+}
+
+#footer {
+  background-color: #272727;
+  color: #00FFFF;
+  text-shadow: 1px 0 0 #662D91 !important;
+}
+
+.mentionsLegales:hover {
+  cursor: pointer;
+  color: #E800A2;
+  text-decoration: underline;
+}
+
+</style>
