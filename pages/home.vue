@@ -6,7 +6,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="my-4">
+    <v-row class="mx-1 my-4 ma-sm-4">
       <v-col cols="12" md="6">
         <v-img
           src="/who_we_are.png"
@@ -31,7 +31,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="my-4">
+    <v-row class="my-4 ma-md-4">
       <v-col>
         <v-card color="#C8B1DD" style="border-radius: 25px" class="ma-auto pa-4">
           <v-row>
@@ -41,15 +41,15 @@
               </h2>
             </v-col>
           </v-row>
-          <v-row class="my-4">
-            <v-col cols="12" md="4">
-              <custom-card class="ma-3" :subtitle="subtitles[0]" :paragraph="paragraphs[0]" :src="src[0]"/>
+          <v-row class="ma-4">
+            <v-col class="px-0 px-md-2" cols="12" md="4">
+              <custom-card class="my-3 ma-sm-3" :subtitle="subtitles[0]" :paragraph="paragraphs[0]" :src="src[0]"/>
             </v-col>
-            <v-col cols="12" md="4">
-              <custom-card class="ma-3" :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]"/>
+            <v-col class="px-0 px-md-2" cols="12" md="4">
+              <custom-card class="my-3 ma-sm-3" :subtitle="subtitles[1]" :paragraph="paragraphs[1]" :src="src[1]"/>
             </v-col>
-            <v-col cols="12" md="4">
-              <custom-card class="ma-3" :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]"/>
+            <v-col class="px-0 px-md-2" cols="12" md="4">
+              <custom-card class="my-3 ma-sm-3" :subtitle="subtitles[2]" :paragraph="paragraphs[2]" :src="src[2]"/>
             </v-col>
           </v-row>
         </v-card>
@@ -57,12 +57,12 @@
     </v-row>
 
 
-    <v-row justify="center" class="my-4">
+    <v-row justify="center" class="mx-1 my-4 ma-sm-4">
 
-      <v-col cols="10" md="8">
+      <v-col cols="12" md="8">
         <v-card flat>
 
-          <v-row class="my-4" justify="center">
+          <v-row class="mt-4" justify="center">
             <v-col class="text-center">
               <h2>
                 {{ titles[2].toUpperCase() }}
@@ -81,7 +81,7 @@
                 width="100%"
                 flat
               >
-                <v-row class="ma-4">
+                <v-row class="">
                   <v-col cols="12" md="6">
                     <!-- image -->
                   </v-col>
@@ -114,7 +114,7 @@
             </v-window-item>
           </v-window>
 
-          <v-card-actions class="justify-space-between">
+          <v-card-actions class="justify-space-between my-4">
             <v-btn
               text
               @click="prev"
@@ -172,7 +172,7 @@
       </v-col>
     </v-row>
     <v-row class="my-4" justify="center">
-      <v-col cols="8" md="4" lg="3" class="text-center">
+      <v-col cols="8" sm="4" lg="3" class="text-center">
         <v-card class="customCardShadow" raised rounded="xl">
           <v-avatar size="65%" class="pa-4">
             <img :src="src[3]"/>
@@ -194,7 +194,7 @@
 import customHeader from '../components/customHeader';
 import customCard from "../components/customCard";
 import coach from "../components/home/coach";
-import {mdiChevronLeft, mdiChevronRight, mdiRecord} from '@mdi/js';
+import {mdiChevronDoubleLeft, mdiChevronDoubleRight, mdiRecord} from '@mdi/js';
 
 export default {
   name: "home",
@@ -206,7 +206,7 @@ export default {
   data() {
     return {
       onBoarding: 0,
-      icons: [mdiChevronLeft, mdiChevronRight, mdiRecord],
+      icons: [mdiChevronDoubleLeft, mdiChevronDoubleRight, mdiRecord],
       coaches: [
         {
           name: 'Georges Delapierre',
@@ -249,9 +249,9 @@ export default {
         'Les muscles profonds sont les muscles du centre, qui se situent entre les côtes et le bassin, ' +
         'et tout autour de la colonne vertébrale (abdominaux, plancher pelvien et les muscles du dos).',
         'Le Body Balance est un cours de fitness complet ' +
-        'et varié qui alterne 3 phases de : Yoga ; Taï-chi ; Pilates L’idée du Body Balance ' +
+        'et varié qui alterne 3 phases de : Yoga ; Taï-chi ; Pilates .L’idée du Body Balance ' +
         'est de créer un programme efficace et accessible pour améliorer sa tonicité, ' +
-        'réduire les douleurs musculaires et réduire son stress.',
+        'réduire les douleurs musculaires et réduire son stress. Cette pratique est excellente remise en forme.',
         'Le TOURANGEAU GYM CLUB est un complexe de 500m2 basé à Tours.\n' +
         'Notre salle est dédiée aux arts pratiques mixtes, au bien-être ainsi qu\'au ' +
         'développement personnel. Nous comptons plus d’une dizaine de disciplines ' +

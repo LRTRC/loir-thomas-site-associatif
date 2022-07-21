@@ -1,44 +1,54 @@
 <template>
   <v-app dark>
-    <v-app-bar fixed elevate-on-scroll app>
-      <v-row justify="center">
-        <v-col>
-          <v-spacer />
-        </v-col>
+    <v-app-bar
+      dark
+      fixed
+      elevate-on-scroll
+    >
+      <img
+        height="100px"
+        width="100px"
+        id="logo"
+        src="/logo.svg"
+      />
+      <v-tabs centered dark color="accent" background-color="#272727">
+        <v-tab
+          :to="routes[0].to" router exact
+        >
+          {{ routes[0].title }}
+        </v-tab>
+      </v-tabs>
+      <v-tabs centered dark color="accent" background-color="#272727">
+        <v-tab
+          :to="routes[1].to" router exact
+        >
+          {{ routes[1].title }}
+        </v-tab>
+      </v-tabs>
 
-        <v-col>
-          <v-tabs dark centered color="accent" background-color="#272727">
-            <v-tab :to="routes[0].to" router exact>
-              {{ routes[0].title }}
-            </v-tab>
-          </v-tabs>
-        </v-col>
 
-        <v-col cols="1">
-          <v-img id="logo" src="..\logo.svg" />
-        </v-col>
-
-        <v-col>
-          <v-tabs dark centered color="accent" background-color="#272727">
-            <v-tab :to="routes[1].to" router exact>
-              {{ routes[1].title }}
-            </v-tab>
-          </v-tabs>
-        </v-col>
-
-        <v-col>
-          <v-spacer />
-        </v-col>
-      </v-row>
     </v-app-bar>
+
     <v-main>
       <v-container fluid>
-        <Nuxt />
+        <Nuxt/>
       </v-container>
     </v-main>
 
-    <v-footer fixed app>
-      <span>Tourangeau GYM Club &copy; {{ new Date().getFullYear() }}</span>
+    <v-footer id="footer" fixed app>
+      <v-row justify="center">
+        <img
+          class="ma-1"
+          height="50px"
+          width="50px"
+          id="logoFooter"
+          src="/logo.svg"
+        />
+        <v-col class="text-left align-self-center">
+          <span class="copyright">Tourangeau GYM Club &copy; {{ new Date().getFullYear() }} - </span>
+          <span class="mentionsLegales">Mentions legales</span>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -51,11 +61,11 @@ export default {
     return {
       routes: [
         {
-          title: "L'association",
+          title: "accueil",
           to: '/home'
         },
         {
-          title: 'Les rendez-vous',
+          title: 'agenda',
           to: '/agenda'
         }
       ],
@@ -69,12 +79,28 @@ export default {
   opacity: 0 !important;
 }
 
-.v-app-bar {
-  background-color: #272727!important;
+#logo {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
-#logo {
-  z-index: 9999!important;
-  position: fixed !important;
+.v-app-bar {
+  background-color: #272727 !important;
 }
+
+#footer {
+  background-color: #272727;
+  color: #00FFFF;
+  text-shadow: 1px 0 0 #662D91 !important;
+}
+
+.mentionsLegales:hover {
+  cursor: pointer;
+  color: #E800A2;
+  text-decoration: underline;
+}
+
 </style>

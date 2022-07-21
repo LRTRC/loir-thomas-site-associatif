@@ -1,7 +1,7 @@
 <template>
   <v-card id="customHeaderCard" class="pt-12 pt-md-0">
-    <v-row>
-      <v-col cols="12" md="8" class="align-self-center text-center">
+    <v-row justify="center">
+      <v-col cols="12" md="6" class="align-self-center text-center">
         <v-row>
           <v-col class="pt-0 my-0">
             <h1>
@@ -18,14 +18,13 @@
         </v-row>
       </v-col>
 
-      <v-col id="imgColumn" cols="12" md="4" lg="3">
-        <v-img
-          class="ma-2"
-          src="../banner.png"
+      <v-col id="imgColumn" cols="12" md="6" lg="4">
+        <img
+          width="100%"
+          height="100%"
+          src="/banner.png"
         />
       </v-col>
-
-
     </v-row>
     <v-row>
       <v-col>

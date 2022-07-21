@@ -7,7 +7,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="my-4" justify="center">
+    <v-row class="ms-4" justify="center">
       <v-col cols="12" md="10">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.1418288301124!2d0.6823868335054476!3d47.38966554431728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5b7b725aec5%3A0x652b0c6527606376!2s22%20Bd%20B%C3%A9ranger%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1657200550848!5m2!1sfr!2sfr"
@@ -77,7 +77,7 @@
             </v-window-item>
           </v-window>
 
-          <v-card-actions class="justify-space-between">
+          <v-card-actions class="justify-space-between py-4">
             <v-btn
               text
               @click="prev"
@@ -132,7 +132,7 @@
 <script>
 import CustomHeader from '../components/customHeader.vue';
 import CustomCard from '../components/customCard.vue';
-import {mdiChevronLeft, mdiChevronRight, mdiRecord} from '@mdi/js';
+import {mdiChevronDoubleLeft, mdiChevronDoubleRight, mdiRecord} from '@mdi/js';
 
 export default {
   name: "agenda",
@@ -140,7 +140,7 @@ export default {
   data() {
     return {
       onBoarding: 0,
-      icons: [mdiChevronLeft, mdiChevronRight, mdiRecord],
+      icons: [mdiChevronDoubleLeft, mdiChevronDoubleRight, mdiRecord],
       searchField: '',
       selectedTheme: null,
       titles: ['tourangeau gym club', 'évènements'],
@@ -172,13 +172,13 @@ export default {
   },
   methods: {
     next() {
-      this.onBoarding = this.onBoarding + 1 === this.eventes
+      this.onBoarding = this.onBoarding + 1 === this.events
         ? 0
         : this.onBoarding + 1
     },
     prev() {
       this.onBoarding = this.onBoarding - 1 < 0
-        ? this.eventes - 1
+        ? this.events - 1
         : this.onBoarding - 1
     },
   },
