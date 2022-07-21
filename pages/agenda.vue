@@ -2,7 +2,7 @@
   <div>
 
     <v-row>
-      <v-col class="pt-0 px-0">
+      <v-col class="mt-4 px-0">
         <CustomHeader :title="titles[0]" :subtitle="subtitles"/>
       </v-col>
     </v-row>
@@ -38,15 +38,15 @@
                 width="100%"
                 flat
               >
-                <v-row class="ma-4">
-                  <v-col cols="12" md="6">
+                <v-row class="ma-4" justify="center">
+                  <v-col cols="12" sm="8" md="6">
                     <img
                       height="100%"
                       width="100%"
                       :src="event.img"
                     />
                   </v-col>
-                  <v-col cols="12" md="6">
+                  <v-col cols="12" md="6" class="align-self-center">
                     <v-row>
                       <v-col>
                         <p class="py-4 text-left">

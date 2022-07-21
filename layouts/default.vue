@@ -38,11 +38,11 @@
     <v-footer id="footer" fixed app>
       <v-row justify="center">
         <img
-          class="ma-1"
-          height="50px"
-          width="50px"
+          class="ma-2 pa-1"
+          height="40px"
+          width="40px"
           id="logoFooter"
-          src="/logo.svg"
+          src="/logo_footer.svg"
         />
         <v-col class="text-left align-self-center">
           <span class="copyright">Tourangeau GYM Club &copy; {{ new Date().getFullYear() }} - </span>

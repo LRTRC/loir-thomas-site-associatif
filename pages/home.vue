@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col class="pt-0 px-0">
+      <v-col class="mt-4 px-0">
         <custom-header :title="headerTitle" :subtitle="headerSubTitle"/>
       </v-col>
     </v-row>
@@ -64,7 +64,7 @@
       </v-col>
     </v-row>
 
-    <v-row justify="center" class="mx-1 my-4 ma-sm-4">
+    <v-row justify="center" >
       <v-col cols="12" md="8">
         <v-card flat>
           <v-window
@@ -78,11 +78,15 @@
                 width="100%"
                 flat
               >
-                <v-row class="">
-                  <v-col cols="12" md="6">
-                    <!-- image -->
+                <v-row justify="center">
+                  <v-col cols="8" sm="6" >
+                    <img
+                      height="100%"
+                      width="100%"
+                      :src="coach.img"
+                    />
                   </v-col>
-                  <v-col cols="12" md="6">
+                  <v-col cols="8" md="6" class="align-self-center">
                     <v-row>
                       <v-col>
                         <p class="py-4 text-left">
@@ -207,18 +211,22 @@ export default {
           name: 'Georges Delapierre',
           job: 'coach pilates - fitness',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
+          img: '/coach_georges.png',
         },
         {
           name: 'Nathalie Nemann',
           job: 'coach body balance - yoga',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
+          img: '/coach_nathalie.png',
+
         },
         {
           name: 'Alexis Seros',
           job: 'coach ft - crossfit',
           testimony: 'Coach de body balance depuis 5 ans, j’ai une véritable passion pour ce letier, aider les gens à s’améliorer physiquement et mentalement en retrouvant une bonne tonicité, je vois chez les personnesque j’entraine une véritable évolution physique et mentale.\n',
-        },
+          img: '/coach_alexis.png',
 
+        },
       ],
       headerTitle: 'GYM CLUB',
       headerSubTitle: 'Complexe sportif mixt',
