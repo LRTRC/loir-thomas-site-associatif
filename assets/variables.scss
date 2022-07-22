@@ -22,7 +22,7 @@ $heading-font-family: 'Barlow-Black' !default;
   h1 {
     font-family: $heading-font-family;
     font-style: italic;
-    font-size: 8em !important;
+    font-size: 8em;
     letter-spacing: 15px !important;
     text-shadow: 5px 0 0 #E800A2, -4px -3px 0 #00FFFF;
   }
@@ -38,7 +38,7 @@ $heading-font-family: 'Barlow-Black' !default;
 
   h3 {
     font-family: $heading-font-family;
-    font-size: 1.2em !important;
+    font-size: 1.2em;
   }
 
   p {
