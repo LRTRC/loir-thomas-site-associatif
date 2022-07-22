@@ -10,6 +10,12 @@ $heading-font-family: 'Barlow-Black' !default;
 
 
 .v-application {
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 5em !important;
+    }
+  }
+  
   h1 {
     font-family: $heading-font-family;
     font-style: italic;
