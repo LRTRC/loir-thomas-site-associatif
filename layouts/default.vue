@@ -58,7 +58,7 @@
 export default {
 middleware({route, redirect}) {
     console.log(route)
-    if(route.path !== '/agenda') {
+    if(route.path === '/') {
       return redirect('/home');
     }
   },
