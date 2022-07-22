@@ -9,7 +9,7 @@
         />
       </v-col>
       <v-col>
-        <h3 class="offset-1 mt-4">
+        <h3 class="mt-4">
           {{ subtitle.toUpperCase() }}
         </h3>
       </v-col>
