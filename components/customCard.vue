@@ -20,7 +20,7 @@
           {{ paragraph }}
         </p>
         <p class="offset-2 pt-4">
-          <span class="link">Inscrivez-vous dès maintenant !</span>
+          <span class="link">S'inscrire maintenant</span>
         </p>
       </v-col>
     </v-row>
