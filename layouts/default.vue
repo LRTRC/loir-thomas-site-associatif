@@ -109,4 +109,8 @@ middleware({route, redirect}) {
   text-decoration: underline;
 }
 
+ .v-container {
+   overflow-x: hidden!important;
+ }
+
 </style>
