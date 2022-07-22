@@ -289,7 +289,6 @@ export default {
   font-family: 'Barlow-Black', sans-serif;
   font-style: italic;
   font-size: 1em !important;
-  letter-spacing: 5px !important;
 }
 
 .customCardShadow {
