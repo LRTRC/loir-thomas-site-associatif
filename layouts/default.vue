@@ -56,6 +56,9 @@
 <script>
 
 export default {
+ middleware({redirect}) {
+    return redirect('/home');
+  },
   name: 'DefaultLayout',
   data() {
     return {
