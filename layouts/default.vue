@@ -56,8 +56,11 @@
 <script>
 
 export default {
- middleware({redirect}) {
-    return redirect('/home');
+middleware({route, redirect}) {
+    console.log(route)
+    if(route.path !== '/agenda') {
+      return redirect('/home');
+    }
   },
   name: 'DefaultLayout',
   data() {
