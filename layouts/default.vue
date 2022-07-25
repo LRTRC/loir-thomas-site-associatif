@@ -57,7 +57,6 @@
 
 export default {
 middleware({route, redirect}) {
-    console.log(route)
     if(route.path === '/') {
       return redirect('/home');
     }
